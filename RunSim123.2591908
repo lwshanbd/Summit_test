@@ -1,0 +1,35 @@
+CUDA Error - ping_pong_cuda_aware.cu:40: 'invalid device ordinal'
+[h50n07:148432] *** Process received signal ***
+[h50n07:148432] Signal: Segmentation fault (11)
+[h50n07:148432] Signal code: Invalid permissions (2)
+[h50n07:148432] Failing at address: 0x200053200000
+[h50n07:148432] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[h50n07:148432] [ 1] /lib64/power9/libc.so.6(+0xada14)[0x2000007cda14]
+[h50n07:148432] [ 2] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(_ZN4PAMI6Device9Interface11PacketModelINS0_5Shmem11PacketModelINS0_11ShmemDeviceINS_4Fifo8WrapFifoINS6_10FifoPacketILj64ELj4096EEENS_7Counter15IndirectBoundedINS_6Atomic12NativeAtomicEEELj256EEENSA_8IndirectINSA_6NativeEEENS3_9CMAShaddrELj256ELj512EEEEEE10postPacketILj2EEEbmmPvmRAT__5iovec+0x144)[0x2000033fa844]
+[h50n07:148432] [ 3] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(_ZN4PAMI8Protocol4Send11EagerSimpleINS_6Device5Shmem11PacketModelINS3_11ShmemDeviceINS_4Fifo8WrapFifoINS7_10FifoPacketILj64ELj4096EEENS_7Counter15IndirectBoundedINS_6Atomic12NativeAtomicEEELj256EEENSB_8IndirectINSB_6NativeEEENS4_9CMAShaddrELj256ELj512EEEEELNS1_15configuration_tE5EE14immediate_implEP21pami_send_immediate_t+0x104)[0x2000033fb244]
+[h50n07:148432] [ 4] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(_ZN4PAMI8Protocol4Send5EagerINS_6Device5Shmem11PacketModelINS3_11ShmemDeviceINS_4Fifo8WrapFifoINS7_10FifoPacketILj64ELj4096EEENS_7Counter15IndirectBoundedINS_6Atomic12NativeAtomicEEELj256EEENSB_8IndirectINSB_6NativeEEENS4_9CMAShaddrELj256ELj512EEEEENS3_3IBV11PacketModelINSN_6DeviceELb1EEEE9EagerImplILNS1_15configuration_tE5ELb1EE9immediateEP21pami_send_immediate_t+0x2c)[0x2000034043ec]
+[h50n07:148432] [ 5] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(PAMI_Send_immediate+0x44)[0x200003334b74]
+[h50n07:148432] [ 6] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/spectrum_mpi/mca_pml_pami.so(mca_pml_pami_send+0x434)[0x200002186994]
+[h50n07:148432] [ 7] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/libmpi_ibm.so.3(PMPI_Send+0x170)[0x2000001c6bb0]
+[h50n07:148432] [ 8] ./pp_cuda_aware[0x10004634]
+[h50n07:148432] [ 9] /lib64/power9/libc.so.6(+0x24078)[0x200000744078]
+[h50n07:148432] [10] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x200000744264]
+[h50n07:148432] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 11
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 2591908: <RunSim123> in cluster <summit> Exited
+
+Job <RunSim123> was submitted from host <batch2> by user <baodishan> in cluster <summit> at Fri Dec  9 19:24:35 2022
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <baodishan> in cluster <summit> at Fri Dec  9 19:26:00 2022
+                            <42*h50n07>
+                            <42*h50n09>
+</ccs/home/baodishan> was used as the home directory.
+</ccs/home/baodishan/Summit_test> was used as the working directory.
+Started at Fri Dec  9 19:26:00 2022
+Terminated at Fri Dec  9 19:26:17 2022
+Results reported at Fri Dec  9 19:26:17 2022
+
+The output (if any) is above this job summary.
+

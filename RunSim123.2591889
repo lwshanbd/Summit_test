@@ -1,0 +1,19 @@
+Hello world from processor h50n03, rank 1 out of 2 processors
+Hello world from processor h37n10, rank 0 out of 2 processors
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 2591889: <RunSim123> in cluster <summit> Done
+
+Job <RunSim123> was submitted from host <batch2> by user <baodishan> in cluster <summit> at Fri Dec  9 19:07:55 2022
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <baodishan> in cluster <summit> at Fri Dec  9 19:08:52 2022
+                            <42*h37n10>
+                            <42*h50n03>
+</ccs/home/baodishan> was used as the home directory.
+</ccs/home/baodishan/Summit_test> was used as the working directory.
+Started at Fri Dec  9 19:08:52 2022
+Terminated at Fri Dec  9 19:09:09 2022
+Results reported at Fri Dec  9 19:09:09 2022
+
+The output (if any) is above this job summary.
+

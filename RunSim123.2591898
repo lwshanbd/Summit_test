@@ -1,0 +1,33 @@
+[h50n16:173240] *** Process received signal ***
+[h50n16:173240] Signal: Segmentation fault (11)
+[h50n16:173240] Signal code: Invalid permissions (2)
+[h50n16:173240] Failing at address: 0x200053200000
+[h50n16:173240] [ 0] linux-vdso64.so.1(__kernel_sigtramp_rt64+0x0)[0x2000000504d8]
+[h50n16:173240] [ 1] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(_ZN4PAMI6Device9Interface11PacketModelINS0_3IBV11PacketModelINS3_6DeviceELb1EEEE10postPacketILj2EEEbmmPvmRAT__5iovec+0x3fc)[0x20000340392c]
+[h50n16:173240] [ 2] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(_ZN4PAMI8Protocol4Send11EagerSimpleINS_6Device3IBV11PacketModelINS4_6DeviceELb1EEELNS1_15configuration_tE5EE14immediate_implEP21pami_send_immediate_t+0xa0)[0x2000034040b0]
+[h50n16:173240] [ 3] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(_ZN4PAMI8Protocol4Send5EagerINS_6Device3IBV11PacketModelINS4_6DeviceELb1EEES7_E9EagerImplILNS1_15configuration_tE5ELb0EE9immediateEP21pami_send_immediate_t+0x1c)[0x20000340439c]
+[h50n16:173240] [ 4] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/pami_port/libpami.so.3(PAMI_Send_immediate+0x44)[0x200003334b74]
+[h50n16:173240] [ 5] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/spectrum_mpi/mca_pml_pami.so(mca_pml_pami_send+0x434)[0x200002186994]
+[h50n16:173240] [ 6] /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/xl-16.1.1-10/spectrum-mpi-10.4.0.3-20210112-dzedzfvocsuzkm4jkqe7o64x53yhq7nm/container/../lib/libmpi_ibm.so.3(PMPI_Send+0x170)[0x2000001c6bb0]
+[h50n16:173240] [ 7] ./pp_cuda_aware[0x10004634]
+[h50n16:173240] [ 8] /lib64/power9/libc.so.6(+0x24078)[0x200000744078]
+[h50n16:173240] [ 9] /lib64/power9/libc.so.6(__libc_start_main+0xb4)[0x200000744264]
+[h50n16:173240] *** End of error message ***
+ERROR:  One or more process (first noticed rank 0) terminated with signal 11
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 2591898: <RunSim123> in cluster <summit> Exited
+
+Job <RunSim123> was submitted from host <batch2> by user <baodishan> in cluster <summit> at Fri Dec  9 19:17:51 2022
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <baodishan> in cluster <summit> at Fri Dec  9 19:19:12 2022
+                            <42*h50n16>
+                            <42*h50n18>
+</ccs/home/baodishan> was used as the home directory.
+</ccs/home/baodishan/Summit_test> was used as the working directory.
+Started at Fri Dec  9 19:19:12 2022
+Terminated at Fri Dec  9 19:19:30 2022
+Results reported at Fri Dec  9 19:19:30 2022
+
+The output (if any) is above this job summary.
+

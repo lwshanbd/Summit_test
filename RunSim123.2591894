@@ -1,0 +1,19 @@
+Error (No such file or directory) executing process: ./ping_pong_cuda_aware
+Error (No such file or directory) executing process: ./ping_pong_cuda_aware
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 2591894: <RunSim123> in cluster <summit> Exited
+
+Job <RunSim123> was submitted from host <batch2> by user <baodishan> in cluster <summit> at Fri Dec  9 19:15:14 2022
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <baodishan> in cluster <summit> at Fri Dec  9 19:16:18 2022
+                            <42*h34n05>
+                            <42*h34n06>
+</ccs/home/baodishan> was used as the home directory.
+</ccs/home/baodishan/Summit_test> was used as the working directory.
+Started at Fri Dec  9 19:16:18 2022
+Terminated at Fri Dec  9 19:16:32 2022
+Results reported at Fri Dec  9 19:16:32 2022
+
+The output (if any) is above this job summary.
+
