@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/baodi/Documents/GitHub.nosync/test_summit",
+      "program": "/Users/baodi/Documents/GitHub.nosync/test_summit/build/Debug/outDebug"
+    }
+  ]
+}
