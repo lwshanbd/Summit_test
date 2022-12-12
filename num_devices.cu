@@ -22,11 +22,6 @@ int main(int argc, char* argv[])
     // Check that only 2 MPI processes are spawn
     int comm_size;
     MPI_Comm_size(MPI_COMM_WORLD, &comm_size);
-    if(comm_size != 2)
-    {
-        printf("This application is meant to be run with 2 MPI processes, not %d.\n", comm_size);
-        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-    }
  
     // Get my rank
     int my_rank;
