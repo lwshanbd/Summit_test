@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <mpi.h>
 
+// -I$(OMPI_DIR)/include -L$(OMPI_DIR)/lib -lmpi_ibm
+
 // Macro for checking errors in CUDA API calls
 #define cudaErrorCheck(call)                                                              \
 do{                                                                                       \
@@ -28,14 +30,10 @@ int main(int argc, char* argv[])
  
     // Get my rank
     int my_rank;
-    MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
- 
-    // Create the window
     int window_buffer = 0;
-    if(my_rank == 1)
-    {
-        cudaErrorCheck( cudaGetDeviceCount(&window_buffer));
-    }
+    MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+    cudaErrorCheck( cudaGetDeviceCount(&window_buffer));
+
     MPI_Win window;
     MPI_Win_create(&window_buffer, sizeof(int), sizeof(int), MPI_INFO_NULL, MPI_COMM_WORLD, &window);
     MPI_Win_fence(0, window);
@@ -43,8 +41,12 @@ int main(int argc, char* argv[])
     int value_fetched;
     if(my_rank == 0)
     {
-        // Fetch the value from the MPI process 1 window
-        MPI_Get(&value_fetched, 1, MPI_INT, 1, 0, 1, MPI_INT, window);
+        for(int i = 1; i < comm_size; i++)
+        {
+            MPI_Get(&value_fetched, 1, MPI_INT, i, 0, 1, MPI_INT, window);
+            window_buffer += value_fetched;
+        }
+
     }
  
     // Wait for the MPI_Get issued to complete before going any further
