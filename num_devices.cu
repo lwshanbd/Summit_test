@@ -39,6 +39,7 @@ int main(int argc, char* argv[])
         for(int i = 1; i < comm_size; i++)
         {
             MPI_Get(&value_fetched, 1, MPI_INT, i, 0, 1, MPI_INT, window);
+            printf("The num of devices from Rank%d is %d\n", i, value_fetched);
             window_buffer += value_fetched;
         }
 
@@ -49,7 +50,7 @@ int main(int argc, char* argv[])
  
     if(my_rank == 0)
     {
-        printf("[MPI process 0] Value fetched from MPI process 1 window: %d.\n", value_fetched);
+        printf("[MPI process 0] Value fetched from MPI process 1 window: %d.\n", window_buffer);
     }
  
     // Destroy the window
